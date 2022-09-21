@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(rootDir, "index.html"));
 });
 
-app.use(express.static('public'))
+app.use("/public", express.static('public'))
 
 
 app.listen(port, () => {
